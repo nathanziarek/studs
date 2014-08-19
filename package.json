@@ -1,0 +1,13 @@
+{
+  "name": "Studs",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanziarek/Studs.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.0",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-less": "^1.3.5"
+  }
+}
