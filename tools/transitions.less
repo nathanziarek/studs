@@ -1,0 +1,17 @@
+/* * * *
+   Mixin: Transitions
+   Provides a mixin providing easy access to CSS3
+   transitions.
+   Usage:
+   .transition( @property; @duration; @timing-function );
+   To create multiple transitions on the same element
+   simply add multiple .transition calls:
+   .transition( @property; @duration; @timing-function );
+   .transition( @property; @duration; @timing-function );
+* * * */
+
+@import "../base/defaults";
+
+.transition( @transition-property; @transition-duration: @transition-duration-default; @transition-timing-function: @transition-timing-function-default ) {
+   transition+: @transition-property @transition-timing-function @transition-duration;
+}
