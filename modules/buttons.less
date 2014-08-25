@@ -1,12 +1,18 @@
 /* * * *
    Module: Buttons
    Clean buttons with necessary styling to remove
-   excess OS and browser garbage.
+   excess OS and browser chrome.
 * * * */
 
 @import "tools/gradients";
+@import "base/defaults";
 
 .button(@color){
+
+   @top-color: contrast(@color, lighten(@color, 5%), @color);
+   @bottom-color: contrast(@color, @color, darken(@color, 5%));
+   @border-color: darken(@bottom-color, 5%);
+
    display: inline-block;
    margin-bottom: 0; // For input.btn
    font-weight: normal;
@@ -15,9 +21,11 @@
    touch-action: manipulation;
    cursor: pointer;
    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-   border+: 1px solid transparent;
+   border: 1px solid @border-color;
    white-space: nowrap;
-   //.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
-   //.user-select(none);
-   #gradient > .top-to-bottom(contrast(@color, darken(@color, 5%), @color), contrast(@color, @color, lighten(@color, 5%)));
+   #gradient > .top-to-bottom(@top-color, @bottom-color);
+   padding: @grid-spacers (@grid-spacers * 2);
+   font-size: @typography-base-size;
+   line-height: unit((@typography-base-size + @grid-spacers * 1.5) / @typography-base-size);
+   user-select: none;
 }
