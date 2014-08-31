@@ -1,0 +1,26 @@
+@import "../../source/modules/buttons";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body { font-family: 'Open Sans'; }
+
+/*.loop(@counter, @remove) when (@counter > 0) {
+    .loop((@counter - @remove), @remove);    // next iteration
+    .btn@{counter}d {
+        .button(hsl(@counter, 50%, 30%));
+    }
+    .btn@{counter}l {
+        .button(hsl(@counter, 50%, 80%));
+    }
+}
+
+.loop(360, 30);*/
+
+button {
+    &.light-on-dark { .studs-button(#336699); }
+    &.dark-on-light { .studs-button(#99bbff); }
+    &.grey0 { .studs-button(hsl(0, 0%, 0%)); }
+    &.grey20 { .studs-button(hsl(0, 0%, 20%)); }
+    &.grey40 { .studs-button(hsl(0, 0%, 40%)); }
+    &.grey60 { .studs-button(hsl(0, 0%, 60%)); }
+    &.grey80 { .studs-button(hsl(0, 0%, 80%)); }
+    &.grey100 { .studs-button(hsl(0, 0%, 100%)); }
+}
