@@ -1,0 +1,1 @@
+casperjs test --includes=test/setup/phantomcss-functions.js --pre=test/setup/phantomcss-setup.js --post=test/setup/phantomcss-cleanup.js test/quiz/
