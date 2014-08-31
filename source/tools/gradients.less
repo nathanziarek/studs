@@ -4,21 +4,23 @@
    IE8 and above. Modified from Bootstrap.
 * * * */
 
-#gradient {
-  .left-to-right(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
-    background-image: linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
-    background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
-  }
-  .right-to-left(@start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100%) {
-    .left-to-right(@end-color; @start-color; @start-percent; @end-percent);
-   }
-  .top-to-bottom(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
-    background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
-    background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
-  }
-  .bottom-to-top(@start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100%) {
-    .top-to-bottom(@start-color; @end-color; @start-percent; @end-percent);
-  }
+#studs {
+    .gradient {
+      .left-to-right(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+        background-image: linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-repeat: repeat-x;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+      }
+      .right-to-left(@start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100%) {
+        .left-to-right(@end-color; @start-color; @start-percent; @end-percent);
+       }
+      .top-to-bottom(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+        background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-repeat: repeat-x;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+      }
+      .bottom-to-top(@start-color: #333; @end-color: #555; @start-percent: 0%; @end-percent: 100%) {
+        .top-to-bottom(@end-color; @start-color; @start-percent; @end-percent);
+      }
+    }
 }

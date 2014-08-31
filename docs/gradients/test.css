@@ -1,0 +1,35 @@
+/* * * *
+   Mixin: Gradients
+   Provides an easy method to create gradients including
+   IE8 and above. Modified from Bootstrap.
+* * * */
+div {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  float: left;
+}
+div.top-to-bottom {
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #336699 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #336699 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ff336699', GradientType=0);
+}
+div.bottom-to-top {
+  background-image: -webkit-linear-gradient(top, #336699 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, #336699 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff336699', endColorstr='#ffffffff', GradientType=0);
+}
+div.left-to-right {
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #336699 100%);
+  background-image: linear-gradient(to right, #ffffff 0%, #336699 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ff336699', GradientType=1);
+}
+div.right-to-left {
+  background-image: -webkit-linear-gradient(left, #336699 0%, #ffffff 100%);
+  background-image: linear-gradient(to right, #336699 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff336699', endColorstr='#ffffffff', GradientType=1);
+}
