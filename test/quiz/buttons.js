@@ -1,27 +1,29 @@
 casper.thenOpen( 'docs/buttons/test.html' );
 
-casper.then(function(){
-	phantomcss.screenshot('.grey0', 'Button - Black');
-});
+var buttonStyles = [
+    { selector: '.grey0', title: 'Button - Grey 0' },
+    { selector: '.grey25', title: 'Button - Grey 25' },
+    { selector: '.grey50', title: 'Button - Grey 50' },
+    { selector: '.grey75', title: 'Button - Grey 75' },
+    { selector: '.grey100', title: 'Button - Grey 100' },
+];
 
-casper.then(function(){
-	phantomcss.screenshot('.grey20', 'Button - Grey 20');
-});
+var curIndex = 0;
 
-casper.then(function(){
-	phantomcss.screenshot('.grey40', 'Button - Grey 40');
-});
-
-casper.then(function(){
-	phantomcss.screenshot('.grey60', 'Button - Grey 60');
-});
-
-casper.then(function(){
-	phantomcss.screenshot('.grey80', 'Button - Grey 80');
-});
-
-casper.then(function(){
-	phantomcss.screenshot('.grey100', 'Button - White');
+casper.repeat(buttonStyles.length, function() {
+    buttonStyle = buttonStyles[curIndex];
+    casper.then(function(){
+        phantomcss.screenshot(buttonStyle.selector, buttonStyle.title);
+    });
+    casper.then(function(){
+        this.mouse.move(buttonStyle.selector);
+        phantomcss.screenshot(buttonStyle.selector, buttonStyle.title + ' - Hover');
+    });
+    casper.then(function(){
+        this.mouse.down(buttonStyle.selector);
+        phantomcss.screenshot(buttonStyle.selector, buttonStyle.title + ' - Down');
+    });
+    curIndex++;
 });
 
 casper.test.done();

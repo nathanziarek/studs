@@ -8,6 +8,5 @@ casper.then( function end_it(){
 });
 
 casper.run(function(){
-	console.log('\nTHE END.');
 	phantom.exit(phantomcss.getExitStatus());
 });
