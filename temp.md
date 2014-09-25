@@ -56,7 +56,7 @@ Page & Session variables give the ability to *tag* data with additional attribut
 
 If any dimension is not available, set it's value to "N/A".
 
-```
+```javascript
 ga("set", "dimension1", "Direct Supply");
 ga("set", "dimension2", "N/A");
 ga("set", "dimension3", "N/A");
@@ -67,7 +67,7 @@ ga("set", "dimension4", "N/A");
 
 In some cases there is a need to override the URL that is sent to Google Analytics in order to allow it to parse the correct meaning. To set the URL, use the following code...
 
-```
+```javascript
 ga("set", "page", URL);
 ```
 
@@ -81,7 +81,7 @@ To help aggregate searches, we'll modify the search term (and querystring) befor
 * <s>Stem</s>
 * <s>Spellcheck</s>
 
-```
+```javascript
 /* Search for "Wheelchair Parts" */
 var URL = "/search?term=wheelchair%20parts";
 ```
@@ -122,7 +122,7 @@ Search results, carousels and promotional images all send impression data.
 
 ### Track Pageview
 
-```
+```javascript
 ga('send', 'pageview');
 ```
 
