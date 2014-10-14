@@ -8,24 +8,24 @@
 @import "../tools/gradients";
 @import "../base/defaults";
 
-.studs-button(@color){
-    #studs > .button-coloring(@color);
-    &:extend( #studs .button-core );
-    &:hover, &.hover {
-        #studs > .button-coloring(lighten(@color, 5%));
-    }
-    &:focus, &.focus {
-        #studs > .button-coloring(lighten(@color, 5%));
-        border-color: #66afe9;
-        outline: 0;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-    }
-    &:active, &.active {
-        #studs > .button-coloring(darken(@color, 5%));
-    }
-}
 
 #studs {
+    .button(@color) {
+        #studs > .button-coloring(@color);
+        &:extend( #studs .button-core );
+        &:hover, &.hover {
+            #studs > .button-coloring(darken(@color, 5%));
+        }
+        &:focus, &.focus {
+            #studs > .button-coloring(darken(@color, 5%));
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        }
+        &:active, &.active {
+            #studs > .button-coloring(darken(@color, 8%));
+        }
+    }
     .button-core {
         display: inline-block;
         margin-bottom: 0; // For input.btn
@@ -40,6 +40,7 @@
         font-size: @typography-base-size;
         line-height: unit((@typography-base-size + @grid-spacers * 1.5) / @typography-base-size);
         user-select: none;
+        border-radius: 2px;
     }
     .button-coloring(@color) {
 
@@ -51,7 +52,7 @@
 
         border: 1px solid @border-color;
         #studs > .gradient > .top-to-bottom(@top-color, @bottom-color);
-        color: contrast(@color, hsl(hue(@color), saturation(@color), 100%-@difference-calcuation), hsl(hue(@color), saturation(@color), @difference-calcuation));
+        color: contrast(@color, hsl(hue(@color), saturation(@color), 100%-@difference-calcuation), hsl(hue(@color), saturation(@color), @difference-calcuation), 50%);
 
     }
 }

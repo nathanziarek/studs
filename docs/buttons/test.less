@@ -2,22 +2,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body { font-family: 'Open Sans'; }
 
-/*.loop(@counter, @remove) when (@counter > 0) {
-    .loop((@counter - @remove), @remove);    // next iteration
-    .btn@{counter}d {
-        .button(hsl(@counter, 50%, 30%));
-    }
-    .btn@{counter}l {
-        .button(hsl(@counter, 50%, 80%));
-    }
-}
-
-.loop(360, 30);*/
-
 button {
-    &.grey0 { .studs-button(hsl(0, 0%, 0%)); }
-    &.grey25 { .studs-button(hsl(0, 0%, 25%)); }
-    &.grey50 { .studs-button(hsl(0, 0%, 50%)); }
-    &.grey75 { .studs-button(hsl(0, 0%, 75%)); }
-    &.grey100 { .studs-button(hsl(0, 0%, 100%)); }
+    &.grey0 { #studs > .button(hsl(0, 0%, 0%)); }
+    &.grey25 { #studs > .button(hsl(0, 0%, 25%)); }
+    &.grey50 { #studs > .button(hsl(0, 0%, 50%)); }
+    &.grey75 { #studs > .button(hsl(0, 0%, 75%)); }
+    &.grey100 { #studs > .button(hsl(0, 0%, 100%)); }
+    &.color1 { #studs > .button(#428bca); }
+    &.color2 { #studs > .button(#f0ad4e); }
+    &.color3 { #studs > .button(#d9534f); }
+    &.color4 { #studs > .button(#5cb85c); }
 }

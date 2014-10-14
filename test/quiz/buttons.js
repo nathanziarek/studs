@@ -6,6 +6,10 @@ var buttonStyles = [
     { selector: '.grey50', title: 'Button - Grey 50' },
     { selector: '.grey75', title: 'Button - Grey 75' },
     { selector: '.grey100', title: 'Button - Grey 100' },
+    { selector: '.color1', title: 'Button - Color 01' },
+    { selector: '.color2', title: 'Button - Color 02' },
+    { selector: '.color3', title: 'Button - Color 03' },
+    { selector: '.color4', title: 'Button - Color 04' },
 ];
 
 var curIndex = 0;
