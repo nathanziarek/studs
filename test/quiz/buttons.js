@@ -10,6 +10,7 @@ var buttonStyles = [
     { selector: 'color2', title: 'Button - Color 02' },
     { selector: 'color3', title: 'Button - Color 03' },
     { selector: 'color4', title: 'Button - Color 04' },
+    { selector: 'color5', title: 'Button - Color 05' },
 ];
 
 var states = ["Hover", "Active", "Focus", ""];
