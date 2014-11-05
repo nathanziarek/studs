@@ -2,16 +2,37 @@
 <html>
     <head>
         <link href="test.css" rel="stylesheet" />
+        <style>td{padding: 10px}</style>
     </head>
     <body>
-        <button class="grey0">Grey 0</button>
-        <button class="grey25">Grey 25</button>
-        <button class="grey50">Grey 50</button>
-        <button class="grey75">Grey 75</button>
-        <button class="grey100">Grey 100</button>
-        <button class="color1">Color 01</button>
-        <button class="color2">Color 02</button>
-        <button class="color3">Color 03</button>
-        <button class="color4">Color 04</button>
+        <table id="buttons">
+        </table>
+                <script>
+            var buttonStyles = [
+                { selector: 'grey0', title: 'Grey 0' },
+                { selector: 'grey25', title: 'Grey 25' },
+                { selector: 'grey50', title: 'Grey 50' },
+                { selector: 'grey75', title: 'Grey 75' },
+                { selector: 'grey100', title: 'Grey 100' },
+                { selector: 'color1', title: 'Color 01' },
+                { selector: 'color2', title: 'Color 02' },
+                { selector: 'color3', title: 'Color 03' },
+                { selector: 'color4', title: 'Color 04' },
+            ];
+            var states = ["hover", "active", "focus", ""];
+            for( j = 0; j < states.length; j++ ) {
+                tr = document.createElement("TR")
+                for(  i = 0; i< buttonStyles.length; i++ ) {
+                    button = document.createElement("BUTTON");
+                    button.className = buttonStyles[i].selector + " " + states[j];
+                    button.textContent = buttonStyles[i].title;
+                    td = document.createElement("TD")
+                    td.setAttribute("class", "cell-" + buttonStyles[i].selector + states[j])
+                    td.appendChild( button );
+                    tr.appendChild( td );
+                }
+                document.getElementById("buttons").appendChild( tr );
+            }
+        </script>
     </body>
 </html>
