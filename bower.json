@@ -1,0 +1,30 @@
+{
+  "name": "Studs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nathanziarek/Studs",
+  "authors": [
+    "Nathan Ziarek <nathan@ziarek.com>"
+  ],
+  "description": "A fully mixin-based design framework. Like a pile of 2x4s waiting to become a wall!",
+  "main": [
+      "source/studs.less",
+      "source/base/defaults.less",
+      "source/libraries/normalize.less",
+      "source/modules/buttons.less",
+      "source/tools/gradients.less",
+      "source/tools/transitions.less"
+  ],
+  "keywords": [
+    "framework",
+    "bootstrap",
+    "lesscss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "docs"
+  ]
+}
