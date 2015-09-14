@@ -1,4 +1,3 @@
-Studs
-=====
+# Studs
 
-CSS framework for styling semantic sites.
+CSS framework for styling semantic components.
